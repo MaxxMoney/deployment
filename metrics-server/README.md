@@ -5,11 +5,10 @@ cd deploy/1.8+
 
 修改metrics-server-deployment.yaml
 
-image: registry.cn-hangzhou.aliyuncs.com/google_containers/metrics-server-amd64:v0.3.6
+        image: registry.cn-hangzhou.aliyuncs.com/google_containers/metrics-server-amd64:v0.3.6
 
-args:
+        args:
         - --kubelet-insecure-tls		# 避免x509: cannot validate certificate
-
         - --kubelet-preferred-address-types=InternalDNS,InternalIP,ExternalDNS,ExternalIP,Hostname
 
 应用deploy中所有文件
