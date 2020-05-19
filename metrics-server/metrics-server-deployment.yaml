@@ -32,7 +32,7 @@ spec:
         image: registry.cn-hangzhou.aliyuncs.com/google_containers/metrics-server-amd64:v0.3.6
         args:
         - --kubelet-insecure-tls
-        - --kubelet-preferred-address-types=InternalIP
+        - --kubelet-preferred-address-types=InternalDNS,InternalIP,ExternalDNS,ExternalIP,Hostname
         imagePullPolicy: Always
         volumeMounts:
         - name: tmp-dir
